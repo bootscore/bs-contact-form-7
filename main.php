@@ -5,14 +5,14 @@
  * Description: Adds Bootstrap 5 alerts and checkboxes to Contact Form 7. It´s an additional plugin and needs https://de.wordpress.org/plugins/contact-form-7/ to work.
  * Author: Bastian Kreiter
  * Author URI: https://crftwrk.de
- * Version: 5.0.0
+ * Version: 5.0.0.1
  */
 
 
 // Register Styles and Scripts
 function contact_scripts() {
     
-    wp_enqueue_script( 'contactform-script', plugins_url( '/js/contactform-script.js', __FILE__ ));
+    wp_enqueue_script( 'contactform-script', plugins_url( '/js/contactform-script.js' , __FILE__ ), array( 'jquery' ), '1.0', true );
     
     wp_register_style( 'contactform-style', plugins_url('css/contactform-style.css', __FILE__) );
         wp_enqueue_style( 'contactform-style' );
