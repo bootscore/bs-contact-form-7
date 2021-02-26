@@ -2,10 +2,10 @@
 /**
  * Plugin Name: bS5 Contact Form 7
  * Plugin URI: https://bootscore.me/plugins/bs-contact-form-7/
- * Description: Adds Bootstrap 5 alerts and checkboxes to Contact Form 7. It´s an additional plugin and needs https://de.wordpress.org/plugins/contact-form-7/ to work.
+ * Description: Note: This is for Contactform 7 version 5.4. Adds Bootstrap 5 alerts and checkboxes to Contact Form 7. It´s an additional plugin and needs https://de.wordpress.org/plugins/contact-form-7/ to work.
  * Author: Bastian Kreiter
  * Author URI: https://crftwrk.de
- * Version: 5.0.0.1
+ * Version: 5.0.0.2
  */
 
 
@@ -22,12 +22,13 @@ add_action('wp_enqueue_scripts','contact_scripts');
 
 //Adjust contact form 7 radios and checkboxes to match bootstrap 4 custom radio structure.
 add_filter('wpcf7_form_elements', function ($content) {
-    $content = preg_replace('/<label><input type="(checkbox|radio)" name="(.*?)" value="(.*?)" \/><span class="wpcf7-list-item-label">/i', '<label class="form-check form-check-\1"><input type="\1" name="\2" value="\3" class="form-check-input"><span class="wpcf7-list-item-label form-check-label">', $content);
+    $content = preg_replace('/<label><input type="(checkbox|radio)" name="(.*?)" value="(.*?)" \/><span class="wpcf7-list-item-label">/i', '<label class="form-check form-check-inline form-check-\1"><input type="\1" name="\2" value="\3" class="form-check-input"><span class="wpcf7-list-item-label form-check-label">', $content);
 
     return $content;
 });
 
-// Disable Contactform 7 Styles
+
+// Disable Contact Form 7 Styles
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 function wps_deregister_styles() {
     wp_deregister_style( 'contact-form-7' );

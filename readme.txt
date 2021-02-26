@@ -3,13 +3,13 @@
 Contributors: craftwerk
 
 Requires at least: 4.5
-Tested up to: 5.6
+Tested up to: 5.6.2
 Requires PHP: 5.6
-Stable tag: 5.0.0.1
+Stable tag: 5.0.0.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This adds Bootstrap 5 alerts, custom Radio and checkboxes to Contact Form 7, Copyright 2021 Bastian Kreiter.
+This plugin adds Bootstrap 5 alerts, custom radio and checkboxes to Contact Form 7, Copyright 2021 Bastian Kreiter.
 
 == Installation ==
 
@@ -23,7 +23,12 @@ Use HTML Markup like here https://bootscore.me/plugins/bs-contact-form-7/
 
 == Changelog ==
 
-    = 5.0.0.1 - February 16 2021 =
+    = 5.0.0.2 - February 26 2021 =
+    
+        * [NEW] Display checks and radios inline
+        * [UPDATE] Ready for CF7 5.4
+
+    = 5.0.0.1 - February 10 2021 =
     
         * [SEO] Load js in footer
 
