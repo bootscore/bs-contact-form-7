@@ -25,6 +25,7 @@ Use HTML Markup like here https://bootscore.me/plugins/bs-contact-form-7/
 
     = 5.0.0.2 - February 26 2021 =
     
+        * [BUGFIX] Hide alert on form submitting
         * [NEW] Display checks and radios inline
         * [UPDATE] Ready for CF7 5.4
 
