@@ -2,7 +2,7 @@
 /**
  * Plugin Name: bS5 Contact Form 7
  * Plugin URI: https://bootscore.me/plugins/bs-contact-form-7/
- * Description: Note: This is for Contactform 7 version 5.4. Adds Bootstrap 5 alerts and checkboxes to Contact Form 7. It´s an additional plugin and needs https://de.wordpress.org/plugins/contact-form-7/ to work.
+ * Description: Note: This is for Contact Form 7 version 5.4. If you use older version of CF7, use <a href="https://github.com/craftwerkberlin/bs5-contact-form-7/tree/2ec60be85f6bdc53420033b131fd821e3ff9fdc2">version 5.0.0.1</a>. Adds Bootstrap 5 alerts and checkboxes to Contact Form 7. It´s an additional plugin and needs <a href="https://wordpress.org/plugins/contact-form-7/">CF7</a> to work.
  * Author: Bastian Kreiter
  * Author URI: https://crftwrk.de
  * Version: 5.0.0.2
