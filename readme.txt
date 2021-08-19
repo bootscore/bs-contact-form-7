@@ -6,7 +6,7 @@ Requires at least: 4.5
 Tested up to: 5.6.2
 Requires PHP: 5.6
 Stable tag: 5.0.0.2
-License: GNU General Public License v2 or later
+License: MIT License
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin adds Bootstrap 5 alerts, custom radio and checkboxes to Contact Form 7, Copyright 2021 Bastian Kreiter.
