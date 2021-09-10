@@ -1,15 +1,15 @@
-=== bS5 Contact Form 7 ===
+=== bS Contact Form 7 ===
 
 Contributors: The bootScore Contributors
 
 Requires at least: 4.5
-Tested up to: 5.6.2
+Tested up to: 5.8.1
 Requires PHP: 5.6
 Stable tag: 5.0.0.2
 License: MIT License
 License URI: https://github.com/bootscore/bs-contact-form-7/blob/main/LICENSE
 
-This plugin adds Bootstrap 5 alerts, custom radio and checkboxes to Contact Form 7, Copyright 2021 Bastian Kreiter.
+This plugin adds Bootstrap 5 alerts, custom radio and checkboxes to Contact Form 7, Copyright 2021 The bootScore Contributors.
 
 == Installation ==
 
