@@ -17,7 +17,7 @@ Documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
 ### Form
 
-````html
+```html
 <p>Required fields are marked *</p>
 
 <div class="row g-3 mb-3">
