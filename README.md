@@ -117,3 +117,4 @@ Phone: 1234567
 
 - Contact Form 7, GNU General Public License (GPL) v2 https://github.com/takayukister/contact-form-7/blob/master/license.txt
 - bS Contact Form 7, MIT License https://github.com/bootscore/bs-contact-form-7/blob/main/LICENSE
+- Plugin Update Checker, YahnisElsts, MIT License https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
