@@ -1,55 +1,54 @@
-
 span.wpcf7-list-item {
-    margin: 0;
+  margin: 0;
 }
 
 span.wpcf7-not-valid-tip {
-    display: none;
+  display: none;
 }
 
 .wpcf7 .ajax-loader::before {
-    display: none;
+  display: none;
 }
 
 .wpcf7-form .ajax-loader {
-    width: 0rem;
-    height: 1rem;
-    margin: 0 0 0 -.3rem;
-    opacity: 0;
-    transition: margin .3s, width .3s, opacity .1s;
+  width: 0rem;
+  height: 1rem;
+  margin: 0 0 0 -.3rem;
+  opacity: 0;
+  transition: margin .3s, width .3s, opacity .1s;
 }
 
 .wpcf7-form.submitting .ajax-loader {
-    margin: 0 .5rem 0 0;
-    opacity: 1;
-    width: 1rem !important;
-    transition: margin .3s, width .3s, opacity .3s .3s ease;
+  margin: 0 .5rem 0 0;
+  opacity: 1;
+  width: 1rem !important;
+  transition: margin .3s, width .3s, opacity .3s .3s ease;
 }
 
 .screen-reader-response {
-    display: none;
+  display: none;
 }
 
 .wpcf7-display-none {
-    display: none;
+  display: none;
 }
 
 .wpcf7-not-valid {
-    border-color: var(--bs-danger) !important;
+  border-color: var(--bs-danger) !important;
 }
 
 label.form-check.form-check-checkbox.not-valid {
-    color: var(--bs-danger);
+  color: var(--bs-danger);
 }
 
 label.form-check.form-check-checkbox.not-valid.checked {
-    color: currentColor;
+  color: currentColor;
 }
 
 button.btn.btn-primary.wpcf7-submit:disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .wpcf7-form.submitting .wpcf7-response-output {
-    display: none;
+  display: none;
 }
