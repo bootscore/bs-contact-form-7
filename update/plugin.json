@@ -1,0 +1,8 @@
+ {
+ 	"name" : "bS Contact Form 7",
+ 	"version" : "5.0.0.3",
+ 	"download_url" : "https://github.com/bootscore/bs-contact-form-7/archive/refs/heads/main.zip",
+ 	"sections" : {
+ 		"description" : "Included Update Checker"
+ 	}
+ }

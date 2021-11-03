@@ -5,8 +5,17 @@
  * Description: Adds Bootstrap 5 alerts and checkboxes to Contact Form 7. It´s an additional plugin and needs <a href="https://wordpress.org/plugins/contact-form-7/">CF7</a> to work.
  * Author: bootScore
  * Author URI: https://bootscore.me
- * Version: 5.0.0.2
+ * Version: 5.0.0.3
  */
+
+
+// Update checker
+require 'update/update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://bootscore.me/wp-content/plugins/bs-contact-form-7-main/update/plugin.json',
+	__FILE__, //Full path to the main plugin file or functions.php.
+	'bs-contact-form-7-main'
+);
 
 
 // Register Styles and Scripts

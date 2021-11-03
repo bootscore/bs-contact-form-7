@@ -5,7 +5,7 @@ Contributors: The bootScore Contributors
 Requires at least: 4.5
 Tested up to: 5.8.1
 Requires PHP: 5.6
-Stable tag: 5.0.0.2
+Stable tag: 5.0.0.3
 License: MIT License
 License URI: https://github.com/bootscore/bs-contact-form-7/blob/main/LICENSE
 
@@ -22,6 +22,12 @@ This plugin adds Bootstrap 5 alerts, custom radio and checkboxes to Contact Form
 Use HTML Markup like here https://bootscore.me/plugins/bs-contact-form-7/
 
 == Changelog ==
+
+    = 5.0.0.3 - November 03 2021 =
+    
+        * [IMPROVEMENT] Reformatted all files
+        * [NEW] Added README.md
+        * [NEW] Included Update Checker
 
     = 5.0.0.2 - February 26 2021 =
     
