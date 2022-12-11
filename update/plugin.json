@@ -1,8 +1,8 @@
  {
  	"name" : "bS Contact Form 7",
- 	"version" : "5.0.0.3",
- 	"download_url" : "https://github.com/bootscore/bs-contact-form-7/archive/refs/heads/main.zip",
+ 	"version" : "5.0.0.4",
+ 	"download_url" : "https://github.com/bootscore/bs-contact-form-7/releases/download/v5.0.0.4/bs-contact-form-7-main.zip",
  	"sections" : {
- 		"description" : "Included Update Checker"
+ 		"description" : "Added filter to remove autop CF7 5.7 and refactored submit spinner"
  	}
  }

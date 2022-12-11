@@ -52,9 +52,9 @@ Documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
 </div>
 
-[acceptance acceptance-789 id:gdpr class:form-check-input use_label_element]I have read the <a href="https://yourdomain.com/privacy-policy/" target="_blank">privacy policy</a> note. I consent to the electronic storage and processing of my entered data to answer my request. Note: You can revoke your consent at any time in the future by emailing <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a>.[/acceptance]
+<p>[acceptance acceptance-789 id:gdpr class:form-check-input use_label_element]I have read the <a href="https://yourdomain.com/privacy-policy/" target="_blank">privacy policy</a> note. I consent to the electronic storage and processing of my entered data to answer my request. Note: You can revoke your consent at any time in the future by emailing <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a>.[/acceptance]</p>
 
-<button type="submit" class="btn btn-primary wpcf7-submit" disabled="disabled"><span class="spinner-border spinner-border-sm ajax-loader" role="status" aria-hidden="true"></span>Send Message</button>
+<p><button type="submit" class="btn btn-primary wpcf7-submit" disabled="disabled">Send Message</button></p>
 ```
 
 ### Mail recipient
