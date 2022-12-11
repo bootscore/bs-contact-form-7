@@ -16,7 +16,6 @@ jQuery(document).ready(function ($) {
     $('button.wpcf7-submit').attr('disabled', 'disabled');
   }, false);
 
-
   // Acceptance
   if (!$('.wpcf7-response-output.wpcf7-display-none').hasClass('wpcf7-acceptance-missing')) {
     $('.wpcf7-response-output.wpcf7-display-none').addClass('alert alert-danger')
@@ -28,7 +27,6 @@ jQuery(document).ready(function ($) {
   document.addEventListener('wpcf7mailsent', function (event) {
     $('label.form-check.form-check-checkbox').removeClass('not-valid checked');
   }, false);
-
 
   $('input#gdpr').change(function () {
     if ($(this).is(":checked")) {
@@ -46,5 +44,8 @@ jQuery(document).ready(function ($) {
       $('button.wpcf7-submit').attr('disabled', 'disabled');
     }
   });
+  
+  // New submit spinner since v5.0.0.4
+  $('.wpcf7-submit').prepend('<div class="ajax-loader"><div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div></div>');
 
 }); // jQuery End

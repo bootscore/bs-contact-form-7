@@ -6,25 +6,6 @@ span.wpcf7-not-valid-tip {
   display: none;
 }
 
-.wpcf7 .ajax-loader::before {
-  display: none;
-}
-
-.wpcf7-form .ajax-loader {
-  width: 0rem;
-  height: 1rem;
-  margin: 0 0 0 -.3rem;
-  opacity: 0;
-  transition: margin .3s, width .3s, opacity .1s;
-}
-
-.wpcf7-form.submitting .ajax-loader {
-  margin: 0 .5rem 0 0;
-  opacity: 1;
-  width: 1rem !important;
-  transition: margin .3s, width .3s, opacity .3s .3s ease;
-}
-
 .screen-reader-response {
   display: none;
 }
@@ -51,4 +32,36 @@ button.btn.btn-primary.wpcf7-submit:disabled {
 
 .wpcf7-form.submitting .wpcf7-response-output {
   display: none;
+}
+
+/* Hide HTML spinner until v5.0.0.3 form markup */
+.wpcf7-submit span {
+  display: none !important;
+}
+
+.wpcf7 .ajax-loader::before {
+  display: none;
+}
+
+/* New spinner since v5.0.0.4 */
+.wpcf7-submit {
+  position: relative;
+}
+
+.wpcf7-submit .ajax-loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bs-btn-bg);
+  border-radius: var(--bs-btn-border-radius);
+  opacity: 0;
+}
+
+.wpcf7-form.submitting .ajax-loader {
+  opacity: 1;
 }
