@@ -50,11 +50,15 @@ Documentation: https://bootscore.me/documentation/bs-contact-form-7/
     [textarea your-message class:form-control placeholder "Message"]
   </div>
 
+  <div class="col-12">
+    [acceptance acceptance-789 id:gdpr class:form-check-input use_label_element]I have read the <a href="https://yourdomain.com/privacy-policy/" target="_blank">privacy policy</a> note. I consent to the electronic storage and processing of my entered data to answer my request. Note: You can revoke your consent at any time in the future by emailing <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a>.[/acceptance]
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary wpcf7-submit w-100" disabled="disabled">Send Message</button>
+  </div>
+
 </div>
-
-<p>[acceptance acceptance-789 id:gdpr class:form-check-input use_label_element]I have read the <a href="https://yourdomain.com/privacy-policy/" target="_blank">privacy policy</a> note. I consent to the electronic storage and processing of my entered data to answer my request. Note: You can revoke your consent at any time in the future by emailing <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a>.[/acceptance]</p>
-
-<p><button type="submit" class="btn btn-primary w-100 wpcf7-submit" disabled="disabled">Send Message</button></p>
 ```
 
 ### Mail recipient
