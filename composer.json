@@ -1,0 +1,27 @@
+{
+    "name": "bootscore/bs-contact-form-7",
+    "description": "Adds Bootstrap to Contact Form 7",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "The bootScore Authors"
+        }
+    ],
+    "readme": "README.md",
+    "homepage": "https://bootscore.me/documentation/bs-contact-form-7/",
+    "support": {
+      "issues": "https://github.com/bootscore/bs-contact-form-7/issues",
+      "forum": "https://github.com/bootscore/bootscore/discussions",
+      "source": "https://github.com/bootscore/bs-contact-form-7",
+      "docs": "https://bootscore.me/documentation/bs-contact-form-7/"
+    },
+    "minimum-stability": "stable",
+    "keywords": [
+      "wordpress",
+      "plugin",
+      "bootscore",
+      "bootstrap",
+      "contact form 7"
+    ]
+}
