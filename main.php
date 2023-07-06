@@ -31,6 +31,7 @@ add_action('wp_enqueue_scripts','contact_scripts');
 //Adjust contact form 7 radios and checkboxes to match bootstrap 4 custom radio structure.
 add_filter('wpcf7_form_elements', function ($content) {
   $content = preg_replace('/<label><input type="(checkbox|radio)" name="(.*?)" value="(.*?)" \/><span class="wpcf7-list-item-label">/i', '<label class="form-check form-check-inline form-check-\1"><input type="\1" name="\2" value="\3" class="form-check-input"><span class="wpcf7-list-item-label form-check-label">', $content);
+  $content = preg_replace('/wpcf7-checkbox\sform-check-input/i', '', $content); //removes wrong classes on type=checkbox
 
   return $content;
 });
