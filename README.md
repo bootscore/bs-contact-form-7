@@ -2,9 +2,7 @@
 
 This plugin adds Bootstrap to radio buttons, checkboxes, alerts and a loading spinner to Contact Form 7. It is an additional plugin and does not replace Contact Form 7.
 
-Demo: https://bootscore.me/plugins/bs-contact-form-7/
-
-Documentation: https://bootscore.me/documentation/bs-contact-form-7/
+Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
 ## Installation
 
