@@ -9,6 +9,10 @@
  */
 
 
+// Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
+
+
 // Update checker
 require 'update/update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
