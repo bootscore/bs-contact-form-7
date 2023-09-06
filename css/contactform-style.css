@@ -71,6 +71,45 @@ button.btn.btn-primary.wpcf7-submit:disabled {
  */
 
 
+/* Valid */
+.wpcf7-form.invalid .form-control,
+.wpcf7-form.invalid .form-select {
+  border-color: var(--bs-form-valid-border-color);
+  background-repeat: no-repeat;
+}
+
+.wpcf7-form.invalid .form-control {
+  background-image: var(--valid-icon);
+  padding-right: calc(1.5em + 0.75rem);
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+
+
+
+.wpcf7-form.invalid .form-control:focus,
+.wpcf7-form.invalid .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25);
+}
+
+.wpcf7-form.invalid textarea.form-control {
+  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+}
+
+.wpcf7-form.invalid .form-select {
+  --bs-form-select-bg-icon: var(--valid-icon);
+padding-right: 4.125rem;
+  background-position: right 0.75rem center, center right 2.25rem;
+  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+
+
+
+
+
+/* Invalid */
 .wpcf7-not-valid.form-control,
 .wpcf7-not-valid.form-select {
   border-color: var(--bs-form-invalid-border-color) !important;
@@ -79,7 +118,7 @@ button.btn.btn-primary.wpcf7-submit:disabled {
 
 
 .wpcf7-not-valid.form-control {
-    background-image: var(--invalid-icon);
+  background-image: var(--invalid-icon) !important;
   padding-right: calc(1.5em + 0.75rem);
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -90,7 +129,7 @@ textarea.wpcf7-not-valid.form-control {
 }
 
 .wpcf7-not-valid.form-select {
-  --bs-form-select-bg-icon: var(--invalid-icon);
+  --bs-form-select-bg-icon: var(--invalid-icon) !important;
 padding-right: 4.125rem;
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -105,7 +144,7 @@ padding-right: 4.125rem;
 
 .wpcf7-not-valid.form-control:focus,
 .wpcf7-not-valid.form-select:focus {
-  box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
 }
 
 
