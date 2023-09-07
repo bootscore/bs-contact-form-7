@@ -153,10 +153,10 @@ textarea.wpcf7-not-valid.form-control {
 /* Valid */
 
 /* Label */
-.wpcf7-form.invalid .form-check-checkbox {
+.wpcf7-form.invalid .form-check-checkbox,
+.wpcf7-form.invalid .form-check-radio {
   color: var(--bs-form-valid-color);
 }
-
 
 /* Checkbox */
 .wpcf7-form.invalid .form-check-input {
@@ -174,25 +174,40 @@ textarea.wpcf7-not-valid.form-control {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25) !important;
 }
 
-
-
 /* Invalid */
 
 /* Label */
+/*
 .wpcf7-not-valid .form-check-checkbox,
 .wpcf7-form.invalid .wpcf7-not-valid .form-check-checkbox{
   color: var(--bs-form-invalid-color);
 }
+*/
+
+.wpcf7-validates-as-required.wpcf7-not-valid .form-check-checkbox,
+.wpcf7-form.invalid .wpcf7-validates-as-required.wpcf7-not-valid .form-check-checkbox{
+  color: var(--bs-form-invalid-color);
+}
 
 /* Checkbox */
-.wpcf7-not-valid .form-check-input,
-.wpcf7-form.invalid .wpcf7-not-valid .form-check-input{
+.wpcf7-validates-as-required.wpcf7-not-valid .form-check-input,
+.wpcf7-form.invalid .wpcf7-validates-as-required.wpcf7-not-valid .form-check-input{
   border-color: var(--bs-form-invalid-border-color);
 }
 
 /* Checkbox */
-.wpcf7-not-valid .form-check-input:focus,
-.wpcf7-form.invalid .wpcf7-not-valid .form-check-input:focus{
+.wpcf7-validates-as-required.wpcf7-not-valid .form-check-input:focus,
+.wpcf7-form.invalid .wpcf7-validates-as-required.wpcf7-not-valid .form-check-input:focus{
   border-color: var(--bs-form-invalid-border-color);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
+}
+
+
+/* Acceptance */
+.wpcf7-form.invalid .form-check-input.is-invalid {
+    border-color: var(--bs-form-invalid-border-color);
+}
+
+.wpcf7-form.invalid .form-check-input.is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
 }

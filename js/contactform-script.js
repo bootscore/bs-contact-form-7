@@ -21,8 +21,8 @@ jQuery(document).ready(function ($) {
     $('.wpcf7-response-output.wpcf7-display-none').addClass('alert alert-danger')
   }
 
-  
-  
+
+
   /*
   document.addEventListener('wpcf7invalid', function (event) {
     $('label.form-check.form-check-checkbox').addClass('not-valid');
@@ -39,7 +39,37 @@ jQuery(document).ready(function ($) {
     }
   });
   */
-  
+
+  /*
+    $('input#gdpr').change(function () {
+    if ($(this).is(":checked")) {
+            $('.form-check-input').removeClass('is-invalid');
+      $('label.form-check.form-check-checkbox').removeClass('is-invalid');
+      $('.form-check-input').addClass('is-valid');
+      $('label.form-check.form-check-checkbox').addClass('is-valid');
+    } else {
+      $('.form-check-input').removeClass('is-valid');
+      $('label.form-check.form-check-checkbox').removeClass('is-valid');
+            $('.form-check-input').addClass('is-invalid');
+      $('label.form-check.form-check-checkbox').addClass('is-invalid');
+    }
+  });
+*/
+
+  $('.wpcf7-acceptance input').change(function () {
+    if ($(this).is(":checked")) {
+      $('.wpcf7-acceptance .form-check-input').removeClass('is-invalid');
+      $('.wpcf7-acceptance label.form-check.form-check-checkbox').removeClass('is-invalid');
+      $('.wpcf7-acceptance .form-check-input').addClass('is-valid');
+      $('.wpcf7-acceptance label.form-check.form-check-checkbox').addClass('is-valid');
+    } else {
+      $('.wpcf7-acceptance .form-check-input').removeClass('is-valid');
+      $('.wpcf7-acceptance label.form-check.form-check-checkbox').removeClass('is-valid');
+      $('.wpcf7-acceptance .form-check-input').addClass('is-invalid');
+      $('.wpcf7-acceptance label.form-check.form-check-checkbox').addClass('is-invalid');
+    }
+  });
+
 
   // Disable Send Button
   $('input#gdpr').click(function () {
@@ -49,7 +79,7 @@ jQuery(document).ready(function ($) {
       $('button.wpcf7-submit').attr('disabled', 'disabled');
     }
   });
-  
+
   // New submit spinner since v5.0.0.4
   $('.wpcf7-submit').prepend('<div class="ajax-loader"><div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div></div>');
 
