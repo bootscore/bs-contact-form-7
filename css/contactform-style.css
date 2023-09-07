@@ -99,7 +99,7 @@ button.btn.btn-primary.wpcf7-submit:disabled {
 
 .wpcf7-form.invalid .form-select {
   --bs-form-select-bg-icon: var(--valid-icon);
-padding-right: 4.125rem;
+  padding-right: 4.125rem;
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
@@ -130,16 +130,10 @@ textarea.wpcf7-not-valid.form-control {
 
 .wpcf7-not-valid.form-select {
   --bs-form-select-bg-icon: var(--invalid-icon) !important;
-padding-right: 4.125rem;
+  padding-right: 4.125rem;
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-
-
-
-
-
-
 
 
 .wpcf7-not-valid.form-control:focus,
@@ -148,28 +142,57 @@ padding-right: 4.125rem;
 }
 
 
-/*
-.wpcf7-not-valid.form-control {
 
-  
-  border-color: var(--bs-form-invalid-border-color) !important;
-  padding-right: calc(1.5em + 0.75rem);
-  background-image: var(--invalid-icon);
-  background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+
+
+
+
+
+/* Checks */
+
+/* Valid */
+
+/* Label */
+.wpcf7-form.invalid .form-check-checkbox {
+  color: var(--bs-form-valid-color);
 }
-+/
 
 
-.wpcf7-not-valid:focus {
+/* Checkbox */
+.wpcf7-form.invalid .form-check-input {
+
+  border-color: var(--bs-form-valid-border-color);
+}
+
+.wpcf7-form.invalid .form-check-input:checked {
+   background-color: var(--bs-form-valid-color);
+}
+
+/* Checkbox */
+.wpcf7-form.invalid .form-check-input:focus {
+  border-color: var(--bs-form-valid-border-color);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25) !important;
+}
+
+
+
+/* Invalid */
+
+/* Label */
+.wpcf7-not-valid .form-check-checkbox,
+.wpcf7-form.invalid .wpcf7-not-valid .form-check-checkbox{
+  color: var(--bs-form-invalid-color);
+}
+
+/* Checkbox */
+.wpcf7-not-valid .form-check-input,
+.wpcf7-form.invalid .wpcf7-not-valid .form-check-input{
+  border-color: var(--bs-form-invalid-border-color);
+}
+
+/* Checkbox */
+.wpcf7-not-valid .form-check-input:focus,
+.wpcf7-form.invalid .wpcf7-not-valid .form-check-input:focus{
+  border-color: var(--bs-form-invalid-border-color);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
-}
-
-label.form-check.form-check-checkbox.not-valid {
-  color: var(--bs-form-invalid-border-color);
-}
-
-label.form-check.form-check-checkbox.not-valid.checked {
-  color: currentColor;
 }

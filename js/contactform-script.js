@@ -21,6 +21,9 @@ jQuery(document).ready(function ($) {
     $('.wpcf7-response-output.wpcf7-display-none').addClass('alert alert-danger')
   }
 
+  
+  
+  /*
   document.addEventListener('wpcf7invalid', function (event) {
     $('label.form-check.form-check-checkbox').addClass('not-valid');
   }, false);
@@ -35,6 +38,8 @@ jQuery(document).ready(function ($) {
       $('label.form-check.form-check-checkbox.not-valid').removeClass('checked');
     }
   });
+  */
+  
 
   // Disable Send Button
   $('input#gdpr').click(function () {
