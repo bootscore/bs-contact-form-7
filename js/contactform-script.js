@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(function ($) {
 
   /* Validation Events for changing response CSS classes */
   document.addEventListener('wpcf7invalid', function (event) {
@@ -21,41 +21,6 @@ jQuery(document).ready(function ($) {
     $('.wpcf7-response-output.wpcf7-display-none').addClass('alert alert-danger')
   }
 
-
-
-  /*
-  document.addEventListener('wpcf7invalid', function (event) {
-    $('label.form-check.form-check-checkbox').addClass('not-valid');
-  }, false);
-  document.addEventListener('wpcf7mailsent', function (event) {
-    $('label.form-check.form-check-checkbox').removeClass('not-valid checked');
-  }, false);
-
-  $('input#gdpr').change(function () {
-    if ($(this).is(":checked")) {
-      $('label.form-check.form-check-checkbox').addClass('checked');
-    } else {
-      $('label.form-check.form-check-checkbox.not-valid').removeClass('checked');
-    }
-  });
-  */
-
-  /*
-    $('input#gdpr').change(function () {
-    if ($(this).is(":checked")) {
-            $('.form-check-input').removeClass('is-invalid');
-      $('label.form-check.form-check-checkbox').removeClass('is-invalid');
-      $('.form-check-input').addClass('is-valid');
-      $('label.form-check.form-check-checkbox').addClass('is-valid');
-    } else {
-      $('.form-check-input').removeClass('is-valid');
-      $('label.form-check.form-check-checkbox').removeClass('is-valid');
-            $('.form-check-input').addClass('is-invalid');
-      $('label.form-check.form-check-checkbox').addClass('is-invalid');
-    }
-  });
-*/
-
   $('.wpcf7-acceptance input').change(function () {
     if ($(this).is(":checked")) {
       $('.wpcf7-acceptance .form-check-input').removeClass('is-invalid');
@@ -67,16 +32,6 @@ jQuery(document).ready(function ($) {
       $('.wpcf7-acceptance label.form-check.form-check-checkbox').removeClass('is-valid');
       $('.wpcf7-acceptance .form-check-input').addClass('is-invalid');
       $('.wpcf7-acceptance label.form-check.form-check-checkbox').addClass('is-invalid');
-    }
-  });
-
-
-  // Disable Send Button
-  $('input#gdpr').click(function () {
-    if ($('button.wpcf7-submit').is(':disabled')) {
-      $('button.wpcf7-submit').removeAttr('disabled');
-    } else {
-      $('button.wpcf7-submit').attr('disabled', 'disabled');
     }
   });
 

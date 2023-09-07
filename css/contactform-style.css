@@ -1,33 +1,18 @@
-span.wpcf7-list-item {
+/*!
+ * bS Contact Form 7
+ */
+
+.wpcf7-list-item {
   margin: 0;
 }
 
-span.wpcf7-not-valid-tip {
-  display: none;
-}
-
-.screen-reader-response {
-  display: none;
-}
-
-.wpcf7-display-none {
-  display: none;
-}
-
-
-
-button.btn.btn-primary.wpcf7-submit:disabled {
-  cursor: not-allowed;
-}
-
+.wpcf7-not-valid-tip,
+.screen-reader-response,
+.wpcf7-display-none,
 .wpcf7-form.submitting .wpcf7-response-output {
   display: none;
 }
 
-/* Hide HTML spinner until v5.0.0.3 form markup */
-.wpcf7-submit span {
-  display: none !important;
-}
 
 .wpcf7 .ajax-loader::before {
   display: none;
@@ -57,19 +42,11 @@ button.btn.btn-primary.wpcf7-submit:disabled {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*
  * Validation
  */
 
+/* Forms */
 
 /* Valid */
 .wpcf7-form.invalid .form-control,
@@ -84,9 +61,6 @@ button.btn.btn-primary.wpcf7-submit:disabled {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-
-
-
 
 .wpcf7-form.invalid .form-control:focus,
 .wpcf7-form.invalid .form-select:focus {
@@ -103,10 +77,6 @@ button.btn.btn-primary.wpcf7-submit:disabled {
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-
-
-
-
 
 
 /* Invalid */
@@ -142,12 +112,6 @@ textarea.wpcf7-not-valid.form-control {
 }
 
 
-
-
-
-
-
-
 /* Checks */
 
 /* Valid */
@@ -174,28 +138,16 @@ textarea.wpcf7-not-valid.form-control {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-success-rgb), 0.25) !important;
 }
 
-/* Invalid */
-
-/* Label */
-/*
-.wpcf7-not-valid .form-check-checkbox,
-.wpcf7-form.invalid .wpcf7-not-valid .form-check-checkbox{
-  color: var(--bs-form-invalid-color);
-}
-*/
-
 .wpcf7-validates-as-required.wpcf7-not-valid .form-check-checkbox,
 .wpcf7-form.invalid .wpcf7-validates-as-required.wpcf7-not-valid .form-check-checkbox{
   color: var(--bs-form-invalid-color);
 }
 
-/* Checkbox */
 .wpcf7-validates-as-required.wpcf7-not-valid .form-check-input,
 .wpcf7-form.invalid .wpcf7-validates-as-required.wpcf7-not-valid .form-check-input{
   border-color: var(--bs-form-invalid-border-color);
 }
 
-/* Checkbox */
 .wpcf7-validates-as-required.wpcf7-not-valid .form-check-input:focus,
 .wpcf7-form.invalid .wpcf7-validates-as-required.wpcf7-not-valid .form-check-input:focus{
   border-color: var(--bs-form-invalid-border-color);
@@ -210,4 +162,18 @@ textarea.wpcf7-not-valid.form-control {
 
 .wpcf7-form.invalid .form-check-input.is-invalid:focus {
     box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25) !important;
+}
+
+
+/* Fallbacks */
+
+/* Hide HTML spinner until v5.0.0.3 form markup */
+.wpcf7-submit span {
+  display: none !important;
+}
+
+
+/* Submit as button element */
+button.btn.btn-primary.wpcf7-submit:disabled {
+  cursor: not-allowed;
 }
