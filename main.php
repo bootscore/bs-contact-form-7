@@ -27,7 +27,7 @@ function contact_scripts() {
   wp_enqueue_script( 'contactform-script', plugins_url( '/js/contactform-script.js' , __FILE__ ), array( 'jquery' ), '1.0', true );
 
   wp_register_style( 'contactform-style', plugins_url('css/contactform-style.css', __FILE__) );
-      wp_enqueue_style( 'contactform-style' );
+    wp_enqueue_style( 'contactform-style' );
   }
 
 add_action('wp_enqueue_scripts','contact_scripts');
