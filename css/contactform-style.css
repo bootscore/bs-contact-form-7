@@ -1,5 +1,7 @@
 /*!
  * bS Contact Form 7
+ * 
+ * @version 5.2.0
  */
 
 .wpcf7-list-item {
@@ -12,7 +14,6 @@
 .wpcf7-form.submitting .wpcf7-response-output {
   display: none;
 }
-
 
 .wpcf7 .ajax-loader::before {
   display: none;
@@ -40,7 +41,6 @@
 .wpcf7-form.submitting .ajax-loader {
   opacity: 1;
 }
-
 
 /*
  * Validation
