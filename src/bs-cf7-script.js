@@ -67,7 +67,6 @@ jQuery(function ($) {
       $selectField.addClass('is-valid');
     }
   });
-  */
 
   // Acceptance validation
   $('.wpcf7-acceptance input:not(.wpcf7-acceptance.optional input)').change(function () {
@@ -83,6 +82,7 @@ jQuery(function ($) {
       $('.wpcf7-acceptance label.form-check.form-check-checkbox:not(.wpcf7-acceptance.optional label.form-check.form-check-checkbox)').addClass('is-invalid');
     }
   });
+    */
 
   // New submit spinner since v5.0.0.4
   $('.wpcf7-submit').prepend('<div class="ajax-loader"><div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div></div>');
