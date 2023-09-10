@@ -1,0 +1,223 @@
+/*!
+ *
+ * bS Contact Form 7
+ * 
+ * @version 5.2.0
+ */
+
+// Hide items
+.wpcf7-not-valid-tip,
+.screen-reader-response,
+.wpcf7-display-none,
+.wpcf7-form.submitting .wpcf7-response-output,
+.wpcf7 .ajax-loader::before {
+  display: none;
+}
+
+// Loading spinner
+
+// Old version, submit as a button
+.wpcf7-submit {
+  position: relative;
+
+  .ajax-loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--#{$prefix}btn-bg);
+    border-radius: var(--#{$prefix}btn-border-radius);
+    opacity: 0;
+  }
+}
+
+.wpcf7-form.submitting .ajax-loader {
+  opacity: 1;
+}
+
+
+// Hide HTML spinner until v5.0.0.3 form markup
+.wpcf7-submit span {
+  display: none !important;
+}
+
+
+// Submit as button element
+button.btn.btn-primary.wpcf7-submit:disabled {
+  cursor: not-allowed;
+}
+
+
+// Validation
+
+// Forms
+
+// Valid on submitted
+.wpcf7-form.invalid {
+
+  .form-control,
+  .form-select {
+    border-color: var(--#{$prefix}form-valid-border-color);
+    background-repeat: no-repeat;
+
+    &:focus {
+      box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity);
+    }
+  }
+
+  .form-control {
+    background-image: var(--valid-icon);
+    padding-right: $input-height-inner;
+    background-position: right $input-height-inner-quarter center;
+    background-size: $input-height-inner-half $input-height-inner-half;
+  }
+
+  textarea.form-control {
+    background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+  }
+
+  .form-select {
+    --bs-form-select-bg-icon: var(--valid-icon);
+    padding-right: $form-select-feedback-icon-padding-end;
+    background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+    background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+  }
+
+  // Checks & Radios
+
+  .form-check-checkbox,
+  .form-check-radio {
+    color: var(--#{$prefix}form-valid-color);
+  }
+
+  .form-check-input {
+    border-color: var(--#{$prefix}form-valid-border-color);
+
+    &:checked {
+      background-color: var(--#{$prefix}form-valid-color);
+    }
+
+    &:focus {
+      border-color: var(--#{$prefix}form-valid-border-color);
+      box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity) !important;
+    }
+  }
+}
+
+
+// Invalid live validation
+
+.wpcf7-not-valid {
+  .form-check-checkbox {
+    color: var(--#{$prefix}form-invalid-color);
+  }
+
+  .form-check-input {
+    border-color: var(--#{$prefix}form-invalid-border-color);
+
+    &:focus {
+      border-color: var(--#{$prefix}form-invalid-border-color);
+      box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity) !important;
+    }
+  }
+
+  &.form-select {
+    --bs-form-select-bg-icon: var(--invalid-icon) !important;
+    padding-right: $form-select-feedback-icon-padding-end;
+    background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+    background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+  }
+}
+
+.wpcf7-form.invalid {
+  .wpcf7-not-valid {
+    .form-check-checkbox {
+      color: var(--#{$prefix}form-invalid-color);
+    }
+
+    .form-check-input {
+      border-color: var(--#{$prefix}form-invalid-border-color);
+
+      &:focus {
+        border-color: var(--#{$prefix}form-invalid-border-color);
+        box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity) !important;
+      }
+    }
+  }
+}
+
+
+// Acceptance
+.wpcf7-form.invalid {
+
+  .wpcf7-acceptance:not(.wpcf7-acceptance.optional) {
+
+    // Valid
+
+    .form-check-input {
+
+      &:checked {
+        border-color: var(--#{$prefix}form-valid-border-color);
+      }
+
+      &:checked:focus {
+        box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity) !important;
+      }
+    }
+
+    &:has(.form-check-input:checked) .form-check-label {
+      color: var(--#{$prefix}form-valid-color);
+    }
+
+    // Invalid
+
+    .form-check-input {
+      border-color: var(--#{$prefix}form-invalid-border-color);
+
+      &:focus {
+        box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity) !important;
+      }
+    }
+
+    &:has(.form-check-input) .form-check-label {
+      color: var(--#{$prefix}form-invalid-color);
+    }
+  }
+}
+
+// Invalid fields
+
+.wpcf7-not-valid {
+
+  &.form-control,
+  &.form-select {
+    border-color: var(--#{$prefix}form-invalid-border-color) !important;
+    background-repeat: no-repeat;
+
+    &:focus {
+      box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity) !important;
+    }
+  }
+
+  &.form-control {
+    background-image: var(--invalid-icon) !important;
+    padding-right: $input-height-inner;
+    background-position: right $input-height-inner-quarter center;
+    background-size: $input-height-inner-half $input-height-inner-half;
+  }
+
+  .form-select {
+    --bs-form-select-bg-icon: var(--invalid-icon) !important;
+    padding-right: $form-select-feedback-icon-padding-end;
+    background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+    background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+  }
+}
+
+textarea.wpcf7-not-valid.form-control {
+  background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+}
