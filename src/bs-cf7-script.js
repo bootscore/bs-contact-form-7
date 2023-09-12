@@ -39,10 +39,10 @@ document.addEventListener('wpcf7mailsent', function (event) {
 
 // Spinner to submit button when submitting
 
-// [submit class:btn class:btn-primary class:w-100 "Send Message"] results in
+// [submit class:btn class:btn-primary class:w-100 "Send Message"] results in <input>
 // <input class="wpcf7-form-control wpcf7-submit btn btn-primary w-100" type="submit" value="Send Message" disabled="">
 
-// Use button instead shortcode in forms HTML to add a spinner 
+// Use <button> instead shortcode in forms HTML to add a spinner 
 // <button type="submit" class="btn btn-primary wpcf7-submit w-100" disabled="disabled">Send Message</button>
 
 var submitButtons = document.querySelectorAll('.wpcf7-submit');
