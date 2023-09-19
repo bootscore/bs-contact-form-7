@@ -120,7 +120,7 @@ Message:
 [terms]
    
 -- 
-This email was sent from a contact form on [_site_title]
+This email was sent from a contact form on [_site_title].
 
 Company name
 Street
@@ -135,7 +135,7 @@ Phone: 1234567
 ```html
 Hello [salution] [first-name] [last-name],
 
-thank you for contacting us. We will answer you as soon as possible.
+thank you for contacting us. We will answer as soon as possible.
 
 Here is a copy of your message to us:
 
@@ -157,7 +157,7 @@ Message:
 [terms]
    
 -- 
-This email was sent from a contact form on [_site_title]
+This email was sent from a contact form on [_site_title].
 
 Company name
 Street
