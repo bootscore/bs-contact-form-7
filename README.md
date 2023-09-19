@@ -31,7 +31,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
   <div class="col-lg-6">
     <label class="form-label d-block">I'm interested in</label>
-    [radio radio-gender use_label_element default:1 "Nothing" "Sports" "Cooking"]
+    [radio interests use_label_element default:1 "Nothing" "Sports" "Cooking"]
   </div>
 
   <div class="col-lg-6">
@@ -51,7 +51,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
   <div class="col-md-6">
     <label class="form-label">Email <span class="text-danger">*</span></label>
-    [email* your-email class:form-control placeholder "Enter a valid email address"]
+    [email* email class:form-control placeholder "Enter a valid email address"]
   </div>
 
   <div class="col-md-6">
