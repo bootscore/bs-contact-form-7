@@ -51,7 +51,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
   <div class="col-md-6">
     <label class="form-label">Email <span class="text-danger">*</span></label>
-    [email* email class:form-control placeholder "Enter a valid email address"]
+    [email* your-email class:form-control placeholder "Enter a valid email address"]
   </div>
 
   <div class="col-md-6">
@@ -66,7 +66,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
   <div class="col-12">
     <label class="form-label">Subject</label>
-    [text subject class:form-control placeholder "Quick summary"]
+    [text your-subject class:form-control placeholder "Quick summary"]
   </div>
 
   <div class="col-12">
