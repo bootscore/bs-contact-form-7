@@ -110,6 +110,7 @@ Date: [date]
 Interests: [interests]
 Email: [your-email]
 Region: [region]
+
 Subject: [your-subject]
 
 Message:
@@ -147,6 +148,7 @@ Date: [date]
 Interests: [interests]
 Email: [your-email]
 Region: [region]
+
 Subject: [your-subject]
 
 Message:
