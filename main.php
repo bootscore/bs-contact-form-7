@@ -25,10 +25,10 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 // Register Styles and Scripts
 function contact_scripts() {
     
-  wp_enqueue_script( 'bs-cf7-script.js', plugins_url( '/js/bs-cf7-script.min.js' , __FILE__ ), array( 'jquery' ), '1.0', true );
+  wp_enqueue_script('bs-cf7-script.js', plugins_url('/js/bs-cf7-script.min.js', __FILE__), array(), false, true);
 
-  wp_register_style( 'bs-cf7-style.css', plugins_url('css/bs-cf7-style.min.css', __FILE__) );
-    wp_enqueue_style( 'bs-cf7-style.css' );
+  wp_register_style('bs-cf7-style.css', plugins_url('css/bs-cf7-style.min.css', __FILE__));
+    wp_enqueue_style('bs-cf7-style.css');
   }
 
 add_action('wp_enqueue_scripts','contact_scripts');
