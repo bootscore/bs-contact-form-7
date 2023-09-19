@@ -9,7 +9,6 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 1. Download and install [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 2. Download and install this Support plugin for it
 3. Setup your forms with HTML markup like below and replace with your data.
-4. Do not change the `id="gdpr"` of the acceptance and the `class="wpcf7-submit"` of the send button. Otherwise it will not work. When change this, you have to adjust it in the plugins folder js/contactform-script.js in lines 16 and 33 – 48.
 
 ## HTML Markup
 
@@ -27,7 +26,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
   <div class="col-lg-6">
     <label class="form-label d-block">Age</label>
-    [checkbox age use_label_element exclusive "0-18" "19-29" "30-45" "45-60"]
+    [checkbox age use_label_element exclusive "0-18" "19-29" "30-45" "46-60"]
   </div>
 
   <div class="col-lg-6">
@@ -44,7 +43,6 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
     <label class="form-label">First name <span class="text-danger">*</span></label>
     [text* first-name class:form-control placeholder "Enter your first name"]
   </div>
-
 
   <div class="col-md-6">
     <label class="form-label">Last name <span class="text-danger">*</span></label>
