@@ -98,16 +98,27 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 ### Mail recipient
 
 ```html
-<h1>Inquiry contact form on [_site_title]</h1>
-<h2>Contact details</h2>
-<strong>Gender:</strong> [radio-gender]
-<strong>Name:</strong> [your-name]
-<strong>Email:</strong> [your-email]
-<strong>Option:</strong> [menu-592]
-<strong>File:</strong> [file-388]
-<strong>Subject:</strong> [your-subject]
-<strong>Message:</strong> 
-[your-message]
+Inquiry contact form on [_site_title] from [salution] [first-name] [last-name].
+
+
+Contact details:
+
+Salution: [salution]
+First name: [first-name]
+Last name: [last-name]
+Age: [age]
+Date: [date]
+Interests: [interests]
+Email: [your-email]
+Region: [region]
+Subject: [your-subject]
+
+Message:
+[message]
+
+[newsletter]
+
+[terms]
    
 -- 
 This email was sent from a contact form on [_site_title]
