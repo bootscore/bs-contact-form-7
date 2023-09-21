@@ -7,74 +7,121 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 ## Installation
 
 1. Download and install [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-2. Download and install this Support plugin for it
-3. Setup your forms with HTML markup like below and replace with your data.
-4. Do not change the `id="gdpr"` of the acceptance and the `class="wpcf7-submit"` of the send button. Otherwise it will not work. When change this, you have to adjust it in the plugins folder js/contactform-script.js in lines 16 and 33 – 48.
+2. Download and install bS Contact Form 7 plugin
+3. Set up your forms with HTML markup as below and replace them with your data
 
 ## HTML Markup
 
 ### Form
 
 ```html
-<p>Required fields are marked *</p>
+<p>Required fields are marked <span class="text-danger">*</span></p>
 
 <div class="row g-3 mb-3">
 
-  <div class="col-12">
-    [radio radio-gender use_label_element default:1 "Mrs." "Mr." "Other"]
+  <div class="col-lg-6">
+    <label class="form-label d-block">Salution <span class="text-danger">*</span></label>
+    [checkbox* salution use_label_element exclusive "Mrs." "Mr." "Other"]
+  </div>
+
+  <div class="col-lg-6">
+    <label class="form-label d-block">Age</label>
+    [checkbox age use_label_element exclusive "0-18" "19-29" "30-45" "46-60"]
+  </div>
+
+  <div class="col-lg-6">
+    <label class="form-label d-block">I'm interested in</label>
+    [radio interests use_label_element default:1 "Nothing" "Sports" "Cooking"]
+  </div>
+
+  <div class="col-lg-6">
+    <label class="form-label d-block">Date</label>
+    [date date class:form-control]
   </div>
 
   <div class="col-md-6">
-    [text* your-name class:form-control placeholder "Name*"]
+    <label class="form-label">First name <span class="text-danger">*</span></label>
+    [text* first-name class:form-control placeholder "Enter your first name"]
   </div>
 
   <div class="col-md-6">
-    [email* your-email class:form-control placeholder "Email*"]
+    <label class="form-label">Last name <span class="text-danger">*</span></label>
+    [text* last-name class:form-control placeholder "Enter your last name"]
   </div>
 
   <div class="col-md-6">
-    [select* menu-592 class:form-select first_as_label "Option" "1" "2" "3" "4" "5"]
+    <label class="form-label">Email <span class="text-danger">*</span></label>
+    [email* your-email class:form-control placeholder "Enter a valid email address"]
   </div>
 
   <div class="col-md-6">
-    [file file-388 class:form-control id:form-file limit:5mb filetypes:jpg|jpeg|JPEG|png]
+    <label class="form-label">Where are you from? <span class="text-danger">*</span></label>
+    [select* region class:form-select first_as_label "Choose region" "Asia" "Africa" "Europe" "North America" "South America" "Australia/Ocania"]
   </div>
 
   <div class="col-12">
-    [text your-subject class:form-control placeholder "Subject"]
+    <label class="form-label">File upload (.jpg, .jpeg, .png, max-size 3MB)</label>
+    [file file-upload class:form-control id:form-file limit:3mb filetypes:jpg|jpeg|png]
   </div>
 
   <div class="col-12">
-    [textarea your-message class:form-control placeholder "Message"]
+    <label class="form-label">Subject</label>
+    [text your-subject class:form-control placeholder "Quick summary"]
   </div>
 
   <div class="col-12">
-    [acceptance acceptance-789 id:gdpr class:form-check-input use_label_element]I have read the <a href="https://yourdomain.com/privacy-policy/" target="_blank">privacy policy</a> note. I consent to the electronic storage and processing of my entered data to answer my request. Note: You can revoke your consent at any time in the future by emailing <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a>.[/acceptance]
+    <label class="form-label">Message <span class="text-danger">*</span></label>
+    [textarea* message class:form-control placeholder "Your message to us"]
   </div>
 
   <div class="col-12">
+    [acceptance newsletter optional] Newsletter [/acceptance]
+  </div>
+
+  <div class="col-12">
+    [acceptance terms use_label_element]I have read the <a href="#" target="_blank">privacy policy</a> note. I consent to the electronic storage and processing of my entered data to answer my request. Note: You can revoke your consent at any time in the future by emailing <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a>.[/acceptance]
+  </div>
+
+  <div class="col-12">
+    <!--
+      Default CF7 [submit class:btn class:btn-primary class:w-100 "Send Message"] outputs an <input>:
+      <input class="wpcf7-form-control wpcf7-submit has-spinner btn btn-primary w-100" type="submit" value="Send Message">
+      Use <button> element to add a spinner.
+    -->
     <button type="submit" class="btn btn-primary wpcf7-submit w-100" disabled="disabled">Send Message</button>
   </div>
 
 </div>
+
 ```
 
 ### Mail recipient
 
 ```html
-<h1>Inquiry contact form on [_site_title]</h1>
-<h2>Contact details</h2>
-<strong>Gender:</strong> [radio-gender]
-<strong>Name:</strong> [your-name]
-<strong>Email:</strong> [your-email]
-<strong>Option:</strong> [menu-592]
-<strong>File:</strong> [file-388]
-<strong>Subject:</strong> [your-subject]
-<strong>Message:</strong> 
-[your-message]
+Inquiry contact form on [_site_title] from [salution] [first-name] [last-name].
+
+Contact details:
+
+Salution: [salution]
+First name: [first-name]
+Last name: [last-name]
+Age: [age]
+Date: [date]
+Interests: [interests]
+Email: [your-email]
+Region: [region]
+
+Subject: [your-subject]
+
+Message:
+[message]
+
+[newsletter]
+
+[terms]
    
 -- 
-This email was sent from a contact form on [_site_title]
+This email was sent from a contact form on [_site_title].
 
 Company name
 Street
@@ -87,24 +134,32 @@ Phone: 1234567
 ### Mail sender
 
 ```html
-Hello [your-name],
+Hello [salution] [first-name] [last-name],
 
-thank you for contacting us. We will answer you as soon as possible.
+thank you for contacting us. We will answer as soon as possible.
 
 Here is a copy of your message to us:
 
-<h2>Contact details</h2>
-<strong>Gender:</strong> [radio-gender]
-<strong>Name:</strong> [your-name]
-<strong>Email:</strong> [your-email]
-<strong>Option:</strong> [menu-592]
-<strong>File:</strong> [file-388]
-<strong>Subject:</strong> [your-subject]
-<strong>Message:</strong> 
-[your-message]
+Salution: [salution]
+First name: [first-name]
+Last name: [last-name]
+Age: [age]
+Date: [date]
+Interests: [interests]
+Email: [your-email]
+Region: [region]
+
+Subject: [your-subject]
+
+Message:
+[message]
+
+[newsletter]
+
+[terms]
    
 -- 
-This email was sent from a contact form on [_site_title]
+This email was sent from a contact form on [_site_title].
 
 Company name
 Street

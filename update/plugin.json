@@ -1,8 +1,8 @@
  {
  	"name" : "bS Contact Form 7",
- 	"version" : "5.1.1",
- 	"download_url" : "https://github.com/bootscore/bs-contact-form-7/releases/download/v5.1.1/bs-contact-form-7-main.zip",
+ 	"version" : "5.2.0",
+ 	"download_url" : "https://github.com/bootscore/bs-contact-form-7/releases/download/v5.2.0/bs-contact-form-7-main.zip",
  	"sections" : {
- 		"description" : "Fix wrong class bug on type checkox"
+ 		"description" : "Refactor validation, allow multiple instances on one page and switch to Vanilla JS"
  	}
  }
