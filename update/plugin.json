@@ -1,8 +1,0 @@
- {
- 	"name" : "bS Contact Form 7",
- 	"version" : "5.2.0",
- 	"download_url" : "https://github.com/bootscore/bs-contact-form-7/releases/download/v5.2.0/bs-contact-form-7-main.zip",
- 	"sections" : {
- 		"description" : "Refactor validation, allow multiple instances on one page and switch to Vanilla JS"
- 	}
- }
