@@ -19,12 +19,17 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Update checker
  */
-require 'update/update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'https://bootscore.me/wp-content/plugins/bs-contact-form-7-main/update/plugin.json',
-  __FILE__, //Full path to the main plugin file or functions.php.
-  'bs-contact-form-7-main'
+require 'update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/bootscore/bs-contact-form-7/',
+	__FILE__,
+	'bs-contact-form-7'
 );
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
 
 
 /**
