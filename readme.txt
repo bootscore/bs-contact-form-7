@@ -1,8 +1,8 @@
-=== bS Contact Form 7 ===
+=== bs Contact Form 7 ===
 
 Contributors: The Bootscore Contributors, Bastian Kreiter, Johannes Reiter
 
-Stable tag: 5.2.0
+Stable tag: 5.3.0
 Tested up to: 6.4.2
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -25,6 +25,10 @@ Use HTML Markup as described here https://bootscore.me/documentation/bs-contact-
 
 
 == Changelog ==
+
+= 5.3.0 - December 18 2023 =
+
+* [UPDATE] Update checker v5
 
 = 5.2.0 - September 21 2023 =
 
