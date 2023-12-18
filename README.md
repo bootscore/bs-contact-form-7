@@ -1,4 +1,4 @@
-# bS Contact Form 7
+# bs Contact Form 7
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-contact-form-7?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-contact-form-7)
 
