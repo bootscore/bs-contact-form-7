@@ -60,3 +60,52 @@ submitButtons.forEach(function(button) {
   
   button.insertBefore(loaderDiv, button.firstChild);
 });
+
+
+// Validation
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select all forms with the 'wpcf7-form' class
+    var forms = document.querySelectorAll('.wpcf7-form');
+
+    // Iterate over each form
+    forms.forEach(function(form) {
+      // Add the 'needs-validation' class to the form
+      form.classList.add('needs-validation');
+
+      // Add the 'novalidate' attribute to disable default browser validation
+      form.setAttribute('novalidate', '');
+
+      // Find fields with 'wpcf7-validates-as-required' class and set 'required' attribute
+      var requiredFields = form.querySelectorAll('.wpcf7-validates-as-required');
+      requiredFields.forEach(function(field) {
+        field.setAttribute('required', '');
+      });
+
+      // Find acceptance checkboxes excluding those with class 'optional' and set 'required' attribute
+      var acceptanceCheckboxes = form.querySelectorAll('.wpcf7-acceptance:not(.optional) .form-check-input');
+      acceptanceCheckboxes.forEach(function(checkbox) {
+        checkbox.setAttribute('required', '');
+      });
+
+      // Find checkboxes within '.wpcf7-checkbox' and exclude those with class 'form-check-input' to make them optional
+      var optionalCheckboxes = form.querySelectorAll('.wpcf7-checkbox:not(.wpcf7-exclusive-checkbox) .form-check-input');
+      optionalCheckboxes.forEach(function(checkbox) {
+        checkbox.removeAttribute('required');
+      });
+
+      // Find checkboxes within '.wpcf7-exclusive-checkbox' and set 'required' attribute
+      var exclusiveCheckboxes = form.querySelectorAll('.wpcf7-exclusive-checkbox .form-check-input');
+      exclusiveCheckboxes.forEach(function(checkbox) {
+        checkbox.setAttribute('required', '');
+      });
+
+      // Prevent form submission and display validation styles
+      form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      });
+    });
+  });
