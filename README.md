@@ -1,6 +1,7 @@
 # bs Contact Form 7
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-contact-form-7?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-contact-form-7)
+[![Github All Releases](https://img.shields.io/github/downloads/bootscore/bs-contact-form-7/total.svg)](https://github.com/bootscore/bs-contact-form-7/releases)
 
 This plugin adds Bootstrap to radio buttons, checkboxes, alerts and a loading spinner to Contact Form 7. It is an additional plugin and does not replace Contact Form 7.
 
@@ -9,7 +10,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 ## Installation
 
 1. Download and install [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-2. Download and install bS Contact Form 7 plugin
+2. Download and install latest release [bs-contact-form-7.zip](https://github.com/bootscore/bs-contact-form-7/releases/latest/download/bs-contact-form-7.zip). 
 3. Set up your forms with HTML markup as below and replace them with your data
 
 ## HTML Markup
@@ -175,5 +176,5 @@ Phone: 1234567
 ## License & Credits
 
 - Contact Form 7, GNU General Public License (GPL) v2 https://github.com/takayukister/contact-form-7/blob/master/license.txt
-- bS Contact Form 7, MIT License https://github.com/bootscore/bs-contact-form-7/blob/main/LICENSE
+- bs Contact Form 7, MIT License https://github.com/bootscore/bs-contact-form-7/blob/main/LICENSE
 - Plugin Update Checker, YahnisElsts, MIT License https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
