@@ -11,7 +11,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
 1. Download and install [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 2. Download and install latest release [bs-contact-form-7.zip](https://github.com/bootscore/bs-contact-form-7/releases/latest/download/bs-contact-form-7.zip). 
-3. Set up your forms with HTML markup as below and replace them with your data
+3. Set up your forms with HTML markup as below and replace your data
 
 ## HTML Markup
 
