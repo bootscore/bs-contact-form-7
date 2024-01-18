@@ -26,6 +26,11 @@ Use HTML Markup as described here https://bootscore.me/documentation/bs-contact-
 
 == Changelog ==
 
+= 5.3.1 - January 18 2024 =
+
+* [IMPROVEMENT] Removed -main branch suffix from plugin's folder. This does not affect existing bs-contact-form-7-main installations.
+* [UPDATE] Update checker 5.3
+
 = 5.3.0 - December 18 2023 =
 
 * [UPDATE] Update checker v5
