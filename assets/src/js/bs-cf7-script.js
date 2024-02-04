@@ -1,5 +1,5 @@
 /*!
- * bS Contact Form 7
+ * bs Contact Form 7
  * 
  * @version 5.2.0
  */
