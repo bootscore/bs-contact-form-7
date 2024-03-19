@@ -1,8 +1,7 @@
 /*!
- *
  * bs Contact Form 7
  * 
- * @version 5.2.0
+ * @version 5.2.1
  */
 
 // Hide items
@@ -12,6 +11,11 @@
 .wpcf7-form.submitting .wpcf7-response-output,
 .wpcf7 .ajax-loader::before {
   display: none;
+}
+
+// Hide racaptcha v3 badge
+.grecaptcha-badge {
+  display: none !important;
 }
 
 // Loading spinner
