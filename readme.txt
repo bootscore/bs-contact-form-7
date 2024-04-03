@@ -2,10 +2,11 @@
 
 Contributors: The Bootscore Contributors, Bastian Kreiter, Johannes Reiter
 
-Stable tag: 5.3.2
-Tested up to: 6.4.3
+Stable tag: 5.3.3
+Tested up to: 6.5
 Requires at least: 5.0
 Requires PHP: 7.4
+Requires Plugins: contact-form-7
 License: MIT License
 License URI: https://github.com/bootscore/bs-contact-form-7/blob/main/LICENSE
 
@@ -25,6 +26,12 @@ Use HTML Markup as described here https://bootscore.me/documentation/bs-contact-
 
 
 == Changelog ==
+
+= 5.3.3 - April 03 2024 =
+
+#### Improvement
+
+* Added `Required Plugins` header (WordPress 6.5)
 
 = 5.3.2 - March 28 2024 =
 
