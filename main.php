@@ -1,10 +1,10 @@
 <?php
 /*Plugin Name: bs Contact Form 7
 Plugin URI: https://bootscore.me/documentation/bs-contact-form-7/
-Description: This plugin adds Bootstrap alerts and checkboxes to Contact Form 7. <a href="https://bootscore.me/documentation/bs-contact-form-7/">Documentation</a> | <a href="https://bootscore.me/documentation/bs-contact-form-7/#Changelog">Changelog</a>
+Description: This plugin adds Bootstrap alerts and checkboxes to Contact Form 7.
 Requires Plugins: contact-form-7
-Version: 5.3.3
-Tested up to: 6.5
+Version: 5.3.4
+Tested up to: 6.6
 Requires at least: 5.0
 Requires PHP: 7.4
 Author: Bootscore
