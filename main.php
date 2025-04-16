@@ -37,14 +37,22 @@ $myUpdateChecker->setBranch('main');
  * Register styles and scripts
  */
 function contact_scripts() {
-    
-  wp_enqueue_script('bs-cf7-script.js', plugins_url('/assets/js/bs-cf7-script.min.js', __FILE__), array(), false, true);
+  // File paths
+  $script_file = plugin_dir_path(__FILE__) . 'assets/js/bs-cf7-script.min.js';
+  $style_file  = plugin_dir_path(__FILE__) . 'assets/css/bs-cf7-style.min.css';
 
-  wp_register_style('bs-cf7-style.css', plugins_url('/assets/css/bs-cf7-style.min.css', __FILE__));
-    wp_enqueue_style('bs-cf7-style.css');
-  }
+  // Timestamps as version numbers
+  $script_ver = file_exists($script_file) ? date('YmdHi', filemtime($script_file)) : false;
+  $style_ver  = file_exists($style_file) ? date('YmdHi', filemtime($style_file)) : false;
 
-add_action('wp_enqueue_scripts','contact_scripts');
+  // Enqueue script
+  wp_enqueue_script('bs-cf7-script.js', plugins_url('/assets/js/bs-cf7-script.min.js', __FILE__), [], $script_ver, true);
+
+  // Enqueue style
+  wp_enqueue_style('bs-cf7-style.css', plugins_url('/assets/css/bs-cf7-style.min.css', __FILE__), [], $style_ver);
+}
+
+add_action('wp_enqueue_scripts', 'contact_scripts');
 
 
 /**
