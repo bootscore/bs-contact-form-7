@@ -1,7 +1,7 @@
 /*!
  * bs Contact Form 7
  * 
- * @version 5.2.0
+ * @version 5.4.0
  */
 
 // Validation Events for changing response CSS classes
@@ -60,3 +60,28 @@ submitButtons.forEach(function(button) {
   
   button.insertBefore(loaderDiv, button.firstChild);
 });
+
+
+
+
+// Validation
+// See https://getbootstrap.com/docs/5.3/forms/validation/#custom-styles
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.wpcf7-form')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
