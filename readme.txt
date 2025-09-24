@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore Contributors, Bastian Kreiter, Johannes Reiter
 
-Stable tag: 5.3.3
-Tested up to: 6.5
+Stable tag: 5.3.5
+Tested up to: 6.8
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires Plugins: contact-form-7
@@ -26,6 +26,26 @@ Use HTML Markup as described here https://bootscore.me/documentation/bs-contact-
 
 
 == Changelog ==
+
+= 5.3.5 - April 16 2025 =
+
+#### Improvements
+
+* Added `icon.png`
+* Added a timestamp to prevent caching if JS/CSS files have been changed
+
+#### Updates
+
+* Plugin Update Checker v5.5
+* Tested up to WP 6.8
+
+= 5.3.4 - August 31 2024 =
+
+#### Improvements
+
+* Added icon.svg
+* Updated meta
+* Tested up to WP 6.6
 
 = 5.3.3 - April 03 2024 =
 
