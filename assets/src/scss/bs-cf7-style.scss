@@ -18,9 +18,9 @@
   display: none !important;
 }
 
-// Loading spinner
 
-// Old version, submit as a button
+// Loading spinner
+// Fallback for older version, submit as a button
 .wpcf7-submit {
   position: relative;
 
@@ -37,20 +37,84 @@
     border-radius: var(--#{$prefix}btn-border-radius);
     opacity: 0;
   }
+
+  // Hide HTML spinner until v5.0.0.3 form markup
+  span {
+    display: none !important;
+  }
 }
 
+// Show AJAX loader on submit
 .wpcf7-form.submitting .ajax-loader {
   opacity: 1;
-}
-
-
-// Hide HTML spinner until v5.0.0.3 form markup
-.wpcf7-submit span {
-  display: none !important;
 }
 
 
 // Submit as button element
 button.btn.btn-primary.wpcf7-submit:disabled {
   cursor: not-allowed;
+}
+
+
+// Validation
+// See https://getbootstrap.com/docs/5.3/forms/validation/#custom-styles
+// Example JS validation Works not for checks and radios because CF7 marks all of them an :valid for whatever reason
+// So, checks and radios are marked as :invalid via CSS
+// See https://github.com/bootscore/bs-contact-form-7/pull/21
+.was-validated {
+
+  // Wrong :valid marked invalid checks and radios
+  .wpcf7-not-valid {
+    .form-check-input {
+
+      &:valid {
+        border-color: var(--#{$prefix}form-invalid-border-color);
+      }
+
+      &:valid ~ .form-check-label {
+        color: var(--#{$prefix}form-invalid-color);
+      }
+
+      &:valid:focus {
+        box-shadow: 0 0 0 0.25rem rgba(var(--#{$prefix}danger-rgb), 0.25);
+      }
+    }
+  }
+
+}
+
+// Wrong marked :valid acceptance checks
+.wpcf7-form {
+
+  &.invalid {
+
+    .wpcf7-acceptance:not(.wpcf7-acceptance.optional) {
+
+      // Invalid
+      .form-check-input {
+        border-color: var(--#{$prefix}form-invalid-border-color);
+      }
+
+      .form-check-input:focus {
+        box-shadow: 0 0 0 0.25rem rgba(var(--#{$prefix}danger-rgb), 0.25);
+      }
+
+      &:has(.form-check-input) .form-check-label {
+        color: var(--#{$prefix}form-invalid-color);
+      }
+
+      // Valid
+      .form-check-input:checked {
+        border-color: var(--#{$prefix}form-valid-border-color);
+      }
+
+      .form-check-input:checked:focus {
+        box-shadow: 0 0 0 0.25rem rgba(var(--#{$prefix}success-rgb), 0.25);
+      }
+
+      &:has(.form-check-input:checked) .form-check-label {
+        color: var(--#{$prefix}form-valid-color);
+      }
+    }
+  }
 }
