@@ -58,7 +58,7 @@ button.btn.btn-primary.wpcf7-submit:disabled {
 
 // Validation
 // See https://getbootstrap.com/docs/5.3/forms/validation/#custom-styles
-// Example JS validation Works not for checks and radios because CF7 marks all of them an :valid for whatever reason
+// Example JS validation works not for checks and radios because CF7 marks all of them as :valid for whatever reason
 // So, checks and radios are marked as :invalid via CSS
 // See https://github.com/bootscore/bs-contact-form-7/pull/21
 .was-validated {

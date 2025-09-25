@@ -3,59 +3,54 @@
  * @version 5.4.0
  */
 
-
 // ====================
 // Response Alerts
 // ====================
-document.addEventListener('wpcf7invalid', function (event) {
-  var form = event.target;
-  var responseOutput = form.querySelector('.wpcf7-response-output');
-  if (responseOutput) responseOutput.classList.add('alert', 'alert-danger');
-}, false);
 
-document.addEventListener('wpcf7spam', function (event) {
-  var form = event.target;
-  var responseOutput = form.querySelector('.wpcf7-response-output');
-  if (responseOutput) {
-    responseOutput.classList.remove('alert-danger');
-    responseOutput.classList.add('alert', 'alert-warning');
-  }
-}, false);
+['wpcf7invalid', 'wpcf7spam', 'wpcf7mailfailed', 'wpcf7mailsent'].forEach(evt => {
+  document.addEventListener(evt, function (event) {
+    const form = event.target;
+    const responseOutput = form.querySelector('.wpcf7-response-output');
+    if (!responseOutput) return;
 
-document.addEventListener('wpcf7mailfailed', function (event) {
-  var form = event.target;
-  var responseOutput = form.querySelector('.wpcf7-response-output');
-  if (responseOutput) {
-    responseOutput.classList.remove('alert-danger');
-    responseOutput.classList.add('alert', 'alert-warning');
-  }
-}, false);
+    // Reset classes
+    responseOutput.className = 'wpcf7-response-output'; // wipe everything back to base
 
-document.addEventListener('wpcf7mailsent', function (event) {
-  var form = event.target;
-  var responseOutput = form.querySelector('.wpcf7-response-output');
-  if (responseOutput) {
-    responseOutput.classList.remove('alert-danger', 'alert-warning');
-    responseOutput.classList.add('alert', 'alert-success');
-  }
+    // Always add base
+    responseOutput.classList.add('alert', 'alert-icon');
 
-  // Disable submit button
-  var submitButton = form.querySelector('button.wpcf7-submit');
-  if (submitButton) submitButton.disabled = true;
+    // Switch cases
+    if (evt === 'wpcf7invalid') {
+      responseOutput.classList.add('alert-danger', 'alert-danger-icon');
+    }
+    if (evt === 'wpcf7spam' || evt === 'wpcf7mailfailed') {
+      responseOutput.classList.add('alert-warning', 'alert-warning-icon');
+    }
+    if (evt === 'wpcf7mailsent') {
+      responseOutput.classList.add('alert-success', 'alert-success-icon');
 
-  // Reset validation state
-  form.classList.remove('was-validated');
-}, false);
+      // Disable submit button in this form only
+      const submitButton = form.querySelector('button.wpcf7-submit');
+      if (submitButton) submitButton.disabled = true;
+
+      // Reset validation state
+      form.classList.remove('was-validated');
+    }
+  }, false);
+});
 
 
 // ====================
 // Bootstrap Validation (was-validated)
 // ====================
+
+// See https://getbootstrap.com/docs/5.3/forms/validation/#custom-styles
+// Example JS validation works not for checks and radios because CF7 marks all of them as :valid for whatever reason
+// So, checks and radios are marked as :invalid via CSS
+// See https://github.com/bootscore/bs-contact-form-7/pull/21
 (() => {
   'use strict';
-  const forms = document.querySelectorAll('.wpcf7-form');
-
-  Array.from(forms).forEach(form => {
+  document.querySelectorAll('.wpcf7-form').forEach(form => {
     form.addEventListener('submit', event => {
       if (!form.checkValidity()) {
         event.preventDefault();
@@ -70,16 +65,17 @@ document.addEventListener('wpcf7mailsent', function (event) {
 // ====================
 // Spinner for Submit Button
 // ====================
+
 document.addEventListener('wpcf7beforesubmit', function(event) {
-  var form = event.target;
-  var button = form.querySelector('.wpcf7-submit');
+  const form = event.target;
+  const button = form.querySelector('.wpcf7-submit');
 
   if (!button || button.querySelector('.ajax-loader')) return; // avoid duplicates
 
-  var loaderDiv = document.createElement('div');
+  const loaderDiv = document.createElement('div');
   loaderDiv.classList.add('ajax-loader');
 
-  var spinnerDiv = document.createElement('div');
+  const spinnerDiv = document.createElement('div');
   spinnerDiv.classList.add('spinner-border', 'spinner-border-sm');
   spinnerDiv.setAttribute('role', 'status');
   spinnerDiv.setAttribute('aria-hidden', 'true');
