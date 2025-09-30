@@ -59,7 +59,7 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
 
   <div class="col-md-6">
     <label class="form-label">Where are you from? <span class="text-danger">*</span></label>
-    [select* region class:form-select first_as_label "Choose region" "Asia" "Africa" "Europe" "North America" "South America" "Australia/Ocania"]
+    [select* region class:form-select first_as_label "Choose region" "Asia" "Africa" "Europe" "North America" "South America" "Australia/Oceania"]
   </div>
 
   <div class="col-12">
@@ -95,7 +95,6 @@ Demo & documentation: https://bootscore.me/documentation/bs-contact-form-7/
   </div>
 
 </div>
-
 ```
 
 ### Mail recipient
