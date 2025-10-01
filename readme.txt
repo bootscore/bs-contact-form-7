@@ -2,7 +2,7 @@
 
 Contributors: The Bootscore Contributors, Bastian Kreiter, Johannes Reiter
 
-Stable tag: 5.3.5
+Stable tag: 5.4.0
 Tested up to: 6.8
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -26,6 +26,18 @@ Use HTML Markup as described here https://bootscore.me/documentation/bs-contact-
 
 
 == Changelog ==
+
+= 5.4.0 - October 01 2025 =
+
+#### Improvements
+
+* Refactored to Bootstrap default form validation using `:valid`/`:invalid` pseudo classes
+* Added a filter to switch to vertical checks and radios
+* Added icons to response alerts
+
+#### Updates
+
+* Plugin Update Checker v5.6
 
 = 5.3.5 - April 16 2025 =
 
