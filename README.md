@@ -175,7 +175,7 @@ Phone: 1234567
 
 ```php
 /*
- * Disable horizontal checks and radios layout
+ * Enable vertical checks and radios layout
  */
 add_filter('bootscore/cf7/horizontal-checks-radios', '__return_false');
 ```
