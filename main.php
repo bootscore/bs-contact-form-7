@@ -33,7 +33,6 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 
 
-
 /**
  * Load required files
  */
