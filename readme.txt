@@ -2,8 +2,8 @@
 
 Contributors: The Bootscore Contributors, Bastian Kreiter, Johannes Reiter
 
-Stable tag: 5.4.1
-Tested up to: 6.9
+Stable tag: 5.4.2
+Tested up to: 7.0
 Requires at least: 5.0
 Requires PHP: 7.4
 Requires Plugins: contact-form-7
@@ -26,6 +26,10 @@ Use HTML Markup as described here https://bootscore.me/documentation/bs-contact-
 
 
 == Changelog ==
+
+= 5.4.2 - May 21 2026 =
+
+- Tested up to WP 7.0
 
 = 5.4.1 - January 09 2026 =
 
